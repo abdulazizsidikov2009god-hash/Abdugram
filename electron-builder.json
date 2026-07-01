@@ -16,42 +16,39 @@
     "target": [
       {
         "target": "nsis",
-        "arch": [
-          "x64",
-          "ia32"
-        ]
+        "arch": ["x64", "ia32"]
       },
       {
         "target": "msi",
-        "arch": [
-          "x64"
-        ]
+        "arch": ["x64", "ia32"]
       },
       {
         "target": "portable",
-        "arch": [
-          "x64"
-        ]
+        "arch": ["x64", "ia32"]
       }
     ],
     "certificateFile": null,
     "certificatePassword": null,
-    "signingHashAlgorithms": [
-      "sha256"
-    ]
+    "signingHashAlgorithms": ["sha256"]
   },
   "nsis": {
     "oneClick": false,
     "allowToChangeInstallationDirectory": true,
     "createDesktopShortcut": true,
     "createStartMenuShortcut": true,
-    "shortcutName": "Abdugram",
+    "shortcutName": "Abdugram Messenger",
     "installerIcon": "assets/icon.ico",
     "uninstallerIcon": "assets/icon.ico",
-    "installerHeaderIcon": "assets/icon.ico"
+    "installerHeaderIcon": "assets/icon.ico",
+    "installerSidebar": "assets/installer-sidebar.bmp",
+    "license": "LICENSE.txt"
   },
   "msi": {
     "oneClick": false,
-    "allowToChangeInstallationDirectory": true
+    "allowToChangeInstallationDirectory": true,
+    "createDesktopShortcut": true
+  },
+  "portable": {
+    "artifactName": "${productName}-${version}-portable.exe"
   }
 }

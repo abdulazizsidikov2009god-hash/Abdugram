@@ -1,0 +1,26 @@
+{
+  "name": "abdugram",
+  "version": "1.0.0",
+  "description": "Secure Messenger with End-to-End Encryption",
+  "main": "main.js",
+  "homepage": "./",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run electron\"",
+    "server": "cd server && npm start",
+    "electron": "cd electron && npm start",
+    "build": "npm run build:exe && npm run build:msi && npm run build:portable",
+    "build:exe": "cd electron && electron-builder --win nsis -p onTag",
+    "build:msi": "cd electron && electron-builder --win msi -p onTag",
+    "build:portable": "cd electron && electron-builder --win portable -p onTag",
+    "dist": "npm run build"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.1.0"
+  },
+  "devDependencies": {
+    "concurrently": "^7.0.0",
+    "electron": "^latest",
+    "electron-builder": "^latest",
+    "electron-devtron": "^latest"
+  }
+}
