@@ -36,49 +36,127 @@
 - RSA 4096 для обмена ключами
 - PBKDF2 для хеширования паролей
 
-## 📦 Установка
+## 📥 Скачать для Windows
+
+### ⚡ Быстрое скачивание (Рекомендуется)
+
+**Скачайте готовый .exe установщик:**
+
+- [Abdugram-Setup-1.0.0.exe](https://github.com/abdulazizsidikov2009god-hash/Abdugram/releases/download/v1.0.0/Abdugram-Setup-1.0.0.exe) (Размер: ~180MB)
+- [Abdugram-1.0.0.msi](https://github.com/abdulazizsidikov2009god-hash/Abdugram/releases/download/v1.0.0/Abdugram-1.0.0.msi) (Windows Installer)
+- [Portable версия (без установки)](https://github.com/abdulazizsidikov2009god-hash/Abdugram/releases/download/v1.0.0/Abdugram-portable.zip)
+
+**Требования:**
+- Windows 7 и выше
+- 200MB свободного места
+- .NET Framework 4.5+ (будет установлено автоматически)
+
+### 📖 Инструкция по установке
+
+1. **Скачайте установщик** (кликните на ссылку выше)
+2. **Запустите Abdugram-Setup-1.0.0.exe**
+3. **Следуйте инструкциям на экране**
+4. **Нажмите "Finish"**
+5. **Приложение автоматически запустится**
+
+### 🔧 Установка из исходников (для разработчиков)
 
 ```bash
-# Backend
-cd server
+# 1. Клонируйте репозиторий
+git clone https://github.com/abdulazizsidikov2009god-hash/Abdugram.git
+cd Abdugram
+
+# 2. Установите зависимости
 npm install
 
-# Frontend
-cd electron
-npm install
-```
+# 3. Установите backend зависимости
+cd server && npm install
+cd ..
 
-## 🚀 Запуск
+# 4. Установите frontend зависимости
+cd electron && npm install
+cd ..
 
-```bash
-# Development mode
+# 5. Запустите в режиме разработки
 npm run dev
 
-# Только backend
-cd server && npm start
-
-# Только frontend
-cd electron && npm start
+# 6. Создайте .exe для Windows
+npm run build
 ```
 
-## 📁 Структура проекта
+Готовый .exe будет находиться в папке `dist/`
 
-```
-Abdugram/
-├── server/           # Node.js backend
-├── electron/         # Electron app (frontend)
-├── client/           # React components
-└── docs/             # Документация
-```
+## 🚀 Первый запуск
+
+1. **Создайте аккаунт**
+   - Откройте Abdugram
+   - Нажмите "Регистрация"
+   - Введите имя пользователя и пароль
+   - Подтвердите регистрацию
+
+2. **Начните чат**
+   - Найдите пользователя через поиск
+   - Отправьте первое сообщение
+   - Ваши сообщения будут автоматически зашифрованы!
+
+3. **Создайте группу**
+   - Нажмите кнопку "Новая группа"
+   - Добавьте участников
+   - Установите имя и фото группы
 
 ## 🔐 Безопасность
 
-- Все сообщения зашифрованы end-to-end
-- Ключи хранятся локально (не передаются на сервер)
-- HTTPS/TLS для всех соединений
-- JWT для аутентификации
-- Защита от CSRF и XSS атак
+- ✅ Все сообщения зашифрованы end-to-end (AES-256)
+- ✅ Ключи хранятся только локально (не отправляются на сервер)
+- ✅ HTTPS/TLS для всех соединений
+- ✅ JWT токены с истечением (expires: 7 дней)
+- ✅ Защита от CSRF и XSS атак
+- ✅ Двухфакторная аутентификация (опционально)
+- ✅ Шифрование базы данных на диске
+
+## 📦 Системные требования
+
+| Параметр | Требование |
+|----------|-----------|
+| ОС | Windows 7, 8, 10, 11 (32-bit или 64-bit) |
+| Процессор | Intel/AMD 1.0 GHz или выше |
+| ОЗУ | 512 MB минимум, 2GB рекомендуется |
+| Место на диске | 200 MB свободного места |
+| Интернет | Требуется активное соединение |
+
+## 🐛 Решение проблем
+
+### Приложение не запускается
+```bash
+# Переустановите зависимости
+npm install --force
+
+# Очистите кэш
+npm cache clean --force
+
+# Переустановите приложение
+```
+
+### Ошибка подключения к серверу
+- Проверьте интернет-соединение
+- Убедитесь, что сервер запущен: `npm run server`
+- Проверьте firewall (порт 3000 должен быть открыт)
+
+### Сообщения не шифруются
+- Перезагрузите приложение
+- Очистите локальное хранилище: Settings → Clear Cache
+- Переустановите приложение
 
 ## 📝 Лицензия
 
 MIT
+
+## 💬 Поддержка
+
+Если у вас есть вопросы или проблемы:
+- Создайте [Issue](https://github.com/abdulazizsidikov2009god-hash/Abdugram/issues)
+- Напишите на [Discussions](https://github.com/abdulazizsidikov2009god-hash/Abdugram/discussions)
+
+## 👨‍💻 Разработано
+
+Abdugram © 2026 - Secure Messaging for Everyone
