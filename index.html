@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdugram - Безопасный Мессенджер</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">💬</span>
+                <span class="logo-text">Abdugram</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link active" data-section="home">Главная</a></li>
+                <li class="nav-item"><a href="#features" class="nav-link" data-section="features">Функции</a></li>
+                <li class="nav-item"><a href="#download" class="nav-link" data-section="download">Скачать</a></li>
+                <li class="nav-item"><a href="#security" class="nav-link" data-section="security">Безопасность</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Abdugram</h1>
+            <p class="hero-subtitle">Безопасный мессенджер с военным шифрованием</p>
+            <p class="hero-description">End-to-End Encryption (AES-256) | Защита вашей конфиденциальности | Для Windows</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="scrollToSection('download')">Скачать сейчас</button>
+                <button class="btn btn-secondary" onclick="scrollToSection('features')">Узнать больше</button>
+            </div>
+        </div>
+        <div class="hero-animation">
+            <div class="floating-box box1"></div>
+            <div class="floating-box box2"></div>
+            <div class="floating-box box3"></div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <h2 class="section-title">Основные функции</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🔐</div>
+                <h3>End-to-End Encryption</h3>
+                <p>AES-256 шифрование всех сообщений. Только вы и ваш собеседник можете прочитать сообщения</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">👥</div>
+                <h3>Групповые чаты</h3>
+                <p>Создавайте группы, приглашайте друзей и общайтесь в защищённых групповых чатах</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📁</div>
+                <h3>Обмен файлами</h3>
+                <p>Безопасно отправляйте файлы, фото и видео с автоматическим шифрованием</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>Реал-тайм чат</h3>
+                <p>Моментальная доставка сообщений с уведомлением о печатании собеседника</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔔</div>
+                <h3>Умные уведомления</h3>
+                <p>Получайте уведомления о новых сообщениях, статус прочитанности и печатания</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🛡️</div>
+                <h3>Максимальная безопасность</h3>
+                <p>RSA 4096-bit, HTTPS/TLS, JWT аутентификация, защита от CSRF и XSS</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="download">
+        <h2 class="section-title">Скачать для Windows</h2>
+        <div class="download-container">
+            <!-- Download Cards -->
+            <div class="download-card primary">
+                <div class="badge">⭐ Рекомендуется</div>
+                <h3>Полный установщик</h3>
+                <p class="version">Abdugram Setup v1.0.0</p>
+                <div class="specs">
+                    <span>📦 Размер: 180 MB</span>
+                    <span>💻 Windows 7+</span>
+                </div>
+                <a href="https://github.com/abdulazizsidikov2009god-hash/Abdugram/releases/download/v1.0.0/Abdugram-Setup-1.0.0.exe" class="btn btn-primary btn-block" target="_blank" download>
+                    📥 Скачать .EXE
+                </a>
+                <p class="download-note">Классический установщик с ярлыками на рабочий стол и меню Пуск</p>
+            </div>
+
+            <div class="download-card">
+                <h3>Windows Installer</h3>
+                <p class="version">Abdugram v1.0.0</p>
+                <div class="specs">
+                    <span>📦 Размер: 170 MB</span>
+                    <span>🏢 Для корпораций</span>
+                </div>
+                <a href="https://github.com/abdulazizsidikov2009god-hash/Abdugram/releases/download/v1.0.0/Abdugram-1.0.0.msi" class="btn btn-secondary btn-block" target="_blank" download>
+                    📥 Скачать .MSI
+                </a>
+                <p class="download-note">Интеграция с Windows, поддержка групповых политик</p>
+            </div>
+
+            <div class="download-card">
+                <h3>Портативная версия</h3>
+                <p class="version">Abdugram Portable v1.0.0</p>
+                <div class="specs">
+                    <span>📦 Размер: 160 MB</span>
+                    <span>🚀 Без установки</span>
+                </div>
+                <a href="https://github.com/abdulazizsidikov2009god-hash/Abdugram/releases/download/v1.0.0/Abdugram-portable.exe" class="btn btn-secondary btn-block" target="_blank" download>
+                    📥 Скачать Portable
+                </a>
+                <p class="download-note">Запустите с флешки, не требует прав администратора</p>
+            </div>
+        </div>
+
+        <!-- System Requirements -->
+        <div class="requirements">
+            <h3>Системные требования</h3>
+            <div class="requirements-grid">
+                <div class="req-item">
+                    <span class="req-icon">💻</span>
+                    <p><strong>ОС:</strong> Windows 7, 8, 10, 11</p>
+                </div>
+                <div class="req-item">
+                    <span class="req-icon">⚙️</span>
+                    <p><strong>Процессор:</strong> Intel/AMD 1.0 GHz+</p>
+                </div>
+                <div class="req-item">
+                    <span class="req-icon">🧠</span>
+                    <p><strong>ОЗУ:</strong> 512 MB минимум, 2 GB рекомендуется</p>
+                </div>
+                <div class="req-item">
+                    <span class="req-icon">💾</span>
+                    <p><strong>Место:</strong> 200 MB свободного места</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Installation Guide -->
+        <div class="installation-guide">
+            <h3>Инструкция по установке</h3>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>Скачайте установщик</h4>
+                        <p>Нажмите на одну из кнопок выше для скачивания</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>Запустите файл</h4>
+                        <p>Откройте скачанный .exe или .msi файл</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>Следуйте инструкциям</h4>
+                        <p>Нажимайте "Далее" и согласитесь с условиями</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h4>Завершите установку</h4>
+                        <p>Нажмите "Finish" и приложение автоматически запустится</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Section -->
+    <section id="security" class="security">
+        <h2 class="section-title">🔒 Безопасность</h2>
+        <div class="security-content">
+            <div class="security-info">
+                <h3>Как мы защищаем вашу конфиденциальность</h3>
+                <ul class="security-list">
+                    <li>✅ <strong>AES-256</strong> - Военное шифрование для всех сообщений</li>
+                    <li>✅ <strong>RSA 4096-bit</strong> - Безопасный обмен криптографическими ключами</li>
+                    <li>✅ <strong>End-to-End Encryption</strong> - Только вы и ваш собеседник видите сообщения</li>
+                    <li>✅ <strong>HTTPS/TLS</strong> - Защищённое соединение с сервером</li>
+                    <li>✅ <strong>JWT Аутентификация</strong> - Токены с истечением (7 дней)</li>
+                    <li>✅ <strong>PBKDF2</strong> - Безопасное хеширование паролей</li>
+                    <li>✅ <strong>Локальное хранилище ключей</strong> - Ключи не отправляются на сервер</li>
+                    <li>✅ <strong>2FA (опционально)</strong> - Двухфакторная аутентификация</li>
+                </ul>
+            </div>
+            <div class="encryption-demo">
+                <div class="encryption-box">
+                    <div class="lock-icon">🔒</div>
+                    <p>Ваше сообщение</p>
+                    <div class="arrow">⬇️</div>
+                    <p>Шифруется AES-256</p>
+                    <div class="arrow">⬇️</div>
+                    <p>Отправляется зашифрованным</p>
+                    <div class="arrow">⬇️</div>
+                    <p>Расшифровывается только у получателя</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Abdugram - Безопасный мессенджер для всех</p>
+            <div class="footer-links">
+                <a href="#" target="_blank">GitHub</a>
+                <a href="#" target="_blank">Лицензия</a>
+                <a href="#" target="_blank">Служба поддержки</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
